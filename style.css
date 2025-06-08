@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: #dfe8ed;
+    background: linear-gradient(90deg, rgba(223, 232, 237, 1) 0%, rgba(230, 211, 211, 1) 0%, rgba(240, 247, 241, 1) 56%, rgba(226, 230, 211, 1) 86%, rgba(240, 240, 223, 1) 100%);
+    background-size: cover;
+}
+
+.navContainer{
+    width: 100vw; 
+    background-image: linear-gradient( 109.6deg,  rgba(75,228,255,1) 11.2%, rgba(188,204,251,1) 100.6% );
+    min-height: 100px;
+
+}
+
+#navLogo{
+    font-size: 4rem;
+    background: linear-gradient(18deg, #db2376 12%, #91cfff 52%, #c42363 100%, #e309ac 62%, #bbd12f 10%, #2e61c0e0 60%, #7038c9 50%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#navList{
+    list-style-type: none; 
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 30px;
+    align-items: center;
+    padding: 15px;
+}    
+
+#navListItems2{
+    font-size: 2rem;
+    display: flex;
+    gap: 20px; 
+}
+
+.navBookmarks{
+    text-decoration: none;
+}
+
+.footer{
+    width: 100vw; 
+    background-image: linear-gradient( 109.6deg,  rgba(75,228,255,1) 11.2%, rgba(188,204,251,1) 100.6% );
+    min-height: 100px;
+    font-size: 30px;
+    text-align : center;
+    /* note --> text-align is not a flex-prperty.  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}    
+
+#mainContent{
+    width: 80%; 
+    margin: auto; 
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+
+    /* adding box-shadow */
+    /* <x-offset> | <y-offset> | <blur-raidus> | <spread-radius> | <color> */
+    box-shadow: 0px 0px 30px black;
+}   
+
+.recipe1{
+    display: flex;
+    gap: 8rem;
+}
+
+#recipe1Image{
+    height: 24rem; 
+    width: 28rem; 
+    border-radius: 20px;
+    border: solid black 1px;
+}
+
+.recipe2{
+    display: flex;
+    gap: 8rem; 
+}
+
+#recipe2Image{
+    height: 24rem;
+    width: 28rem; 
+    border-radius: solid black 1px;
+    border-radius: 20px;
+}
+
+.recipe3{
+    display: flex;
+    gap: 8rem;
+}
+
+#recipe3Image{
+    height: 24rem;
+    width: 28rem; 
+    border-radius: 20px;
+    border: solid black 1px; 
+}
+
+.leftbox h2{
+    font-size: 3rem;
+}
+
+.leftbox h3{
+    font-size: 2rem;
+}
+
+.leftbox ul, ol{
+    font-size: 1.2rem;
+}
+
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.rightbox{
+    /* property name | duration | easing function | delay */
+    transition: all 0.5s linear 0s;
+}
+
+.rightbox:hover{
+    transform: scale(1.08); 
+}
+
+.rightbox{
+    position: relative; 
+    display: flex;
+}
+
+.rightbox .overlay{
+    position: absolute;
+    height: 24rem;
+    width: 28rem; 
+    border-radius: 20px; 
+
+    /* position of overlapping --> important condition for overlapping */
+    top: 0px;
+    left: 0px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+
+    /* overlay transition */
+    transition: all 0.5s linear 0s;
+}
+
+.rightbox .overlay{
+    background-color: rgba(76, 69, 69, 0.476);
+    opacity: 0; 
+    box-shadow: 3px 3px 40px black;
+}
+
+.rightbox .overlay:hover{
+    opacity: 1; 
+}
+
+.rightbox .overlay span{
+    color:white;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 0.75s linear 0s; 
+}
+
+.rightbox .overlay:hover span{
+    /* It says that on doing hover on any part of the overlay container, the opacity of the span element will become1 */
+    opacity: 1; 
+}
+
